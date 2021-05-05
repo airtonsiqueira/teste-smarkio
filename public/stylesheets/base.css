@@ -1,0 +1,19 @@
+:root {
+  --smarkio_dark_blue: #4c84c5;
+  --smarkio_light_blue: #79bce9;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: whitesmoke;
+  text-align: center;
+  color: whitesmoke;
+}
+
+.main_container {
+  max-width: none;
+  width: 98%;
+  margin: 1% 1% 1% 1%;
+  padding: 10px;
+  display: flex;
+}

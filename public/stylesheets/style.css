@@ -1,0 +1,57 @@
+@import url("./base.css");
+
+.left_container {
+  width: 50%;
+  background: var(--smarkio_dark_blue);
+  padding: inherit;
+}
+
+.right_container {
+  background: var(--smarkio_light_blue);
+  flex-grow: 1;
+  padding: inherit;
+}
+
+.btn_submit_commentary,
+.btn_play_audio {
+  background-color: var(--smarkio_light_blue);
+  border-radius: 0;
+  color: whitesmoke;
+  transition: 0.3s;
+  border: 1px solid black;
+}
+
+.btn_submit_commentary:hover,
+.btn_play_audio:hover {
+  filter: brightness(110%);
+  transition: 0.3s;
+  border: 1px solid black;
+}
+
+.btn_play_audio:hover {
+  filter: brightness(90%);
+}
+
+.btn_play_audio,
+.btn_play_audio:hover {
+  border: 1px solid whitesmoke;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  -webkit-text-stroke: 1px black;
+}
+
+p {
+  text-shadow: 0 0 5px black;
+  margin-top: 0;
+  margin-bottom: 0%;
+}
+
+audio {
+  display: none;
+}

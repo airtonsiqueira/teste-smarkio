@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SMARKIO - Airton Siqueira</title>
+    <!-- Libs -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"></script>
+    <link rel="icon" type="image/png" href="https://www.smarkio.com.br/wp-content/uploads/2018/07/cropped-icon-32x32.png"/>
+    
+
+    <!-- Custom -->
+    <script type="text/javascript" src="javascripts/index.js"></script>
+    <link rel="stylesheet" href="stylesheets/style.css"></link>
+    
+</head>
+<body>
+    <section class="main_container">
+        <div class="left_container">
+          <article>
+              <form class="inline">
+            <div class="form-group">
+                <h1>Comentário</h1>
+                <textarea class="form-control" rows="5" id="user_new_comment"></textarea>
+              </div>
+              <button type="button" class="btn btn_submit_commentary" onclick="insertNewComment('user_new_comment')">Enviar</button>
+              </form>
+              </article>
+          </article>
+        </div>
+        <div class="right_container">
+          <article>
+            <h1>Comentários</h1>
+            <br/>
+            <% for (item in data){ %>
+            <div class="comment_section">
+                <p><%= data[item]['comment'] %></p>
+                <audio controls>
+                  <source src="<%= data[item]['file_path'] %>" id="audio_<%= data[item]['id'] %>" type="audio/wav">
+                </audio>
+                <button type="button" class="btn btn_play_audio" id="<%= data[item]['id'] %>" onclick="playAudio(this.id)">Play!</button>
+                <button type="button" class="btn btn_play_audio" id="<%= data[item]['id'] %>" onclick="deleteAudio(this.id)">Excluir</button>
+            </div>
+            <% } %>
+          </article>
+        </div>
+      </section>
+    
+    
+</body>
+</html>                                		                            
